@@ -1,6 +1,13 @@
 # Counter App
 - Created a counter app using basic jetpack compose and MVVM architecture
 ---
+## Screenshots
+<p align="center">
+<img src = "https://raw.githubusercontent.com/abhineshchandra1234/CounterMVVM/master/app/src/main/res/drawable/screenshots/landscape.png" height=200px width=500px/>
+  <img src = "https://raw.githubusercontent.com/abhineshchandra1234/CounterMVVM/master/app/src/main/res/drawable/screenshots/potrait.png" height=300px/>
+</p>
+
+---
 ## Topics Covered
 - View Model
 - MVVM
