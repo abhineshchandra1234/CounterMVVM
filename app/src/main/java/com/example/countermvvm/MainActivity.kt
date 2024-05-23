@@ -28,12 +28,12 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            val viewModel: CounterViewModel = viewModel()
+            val viewModelCounter: CounterViewModel = viewModel()
             CounterMVVMTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     TheCounterApp(
                         modifier = Modifier.padding(innerPadding),
-                        viewModel
+                        viewModelCounter
                     )
                 }
             }
@@ -44,7 +44,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun TheCounterApp(
     modifier: Modifier = Modifier,
-    viewModel: CounterViewModel
+    viewModelCounter: CounterViewModel
 ) {
 
     Column(
@@ -53,16 +53,16 @@ fun TheCounterApp(
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(
-            text = "Count : ${viewModel.count.value}",
+            text = "Count : ${viewModelCounter.count.value}",
             fontSize = 24.sp,
             fontWeight = FontWeight.Bold
         )
         Spacer(modifier = Modifier.height(16.dp))
         Row {
-            Button(onClick = { viewModel.increment() }) {
+            Button(onClick = { viewModelCounter.increment() }) {
                 Text(text = "Increment")
             }
-            Button(onClick = { viewModel.decrement() }) {
+            Button(onClick = { viewModelCounter.decrement() }) {
                 Text(text = "Decrement")
             }
         }
